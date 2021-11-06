@@ -19,6 +19,7 @@ module.exports = {
     },
     mailgun: {
       key: process.env.MAILGUN_KEY,
+      url: process.env.MAILGUN_URL,
       domain: process.env.MAILGUN_DOMAIN,
       sender: process.env.MAILGUN_EMAIL_SENDER
     },

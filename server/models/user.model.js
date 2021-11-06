@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const userSchema = mongoose.Schema({
     email: {
@@ -50,3 +51,20 @@ const userSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model('User', userSchema);
+
+module.exports.hashPassword = async (password) => {
+    try {
+        const salt = await bcrypt.genSalt(10);
+        return await bcrypt.hash(password, salt);
+    } catch (error) {
+        console.log("Hashing failed", error);
+    }
+}
+
+module.exports.comparePasswords = async (password, hashedPassword) => {
+    try {
+        return await bcrypt.compare(password, hashedPassword)
+    } catch (error) {
+        console.log("Comparison failed", error);
+    }
+}
