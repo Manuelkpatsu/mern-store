@@ -238,7 +238,7 @@ const resetPassword = async (req, res) => {
     }
 }
 
-const googleRedirect = (req, res) => {
+const googleCallback = (req, res) => {
     const jwt = `Bearer ${generateToken(req.user.id)}`;
 
     const htmlWithEmbeddedJWT = `
@@ -255,7 +255,7 @@ const googleRedirect = (req, res) => {
     res.send(htmlWithEmbeddedJWT);
 }
 
-const facebookRedirect = (req, res) => {
+const facebookCallback = (req, res) => {
     const jwt = `Bearer ${generateToken(req.user.id)}`;
 
     const htmlWithEmbeddedJWT = `
@@ -278,6 +278,6 @@ module.exports = {
     forgotPassword,
     resetPasswordWithToken,
     resetPassword,
-    googleRedirect,
-    facebookRedirect
+    googleCallback,
+    facebookCallback
 }

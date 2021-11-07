@@ -32,9 +32,9 @@ const cartItemSchema = mongoose.Schema({
 module.exports = mongoose.model('CartItem', cartItemSchema);
 
 const cartSchema = mongoose.Schema({
-    products: [CartItemSchema],
+    products: [cartItemSchema],
     user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
 }, {

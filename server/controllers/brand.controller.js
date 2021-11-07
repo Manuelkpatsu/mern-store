@@ -118,7 +118,7 @@ const selectListOfBrands = async (req, res) => {
     }
 }
 
-const updateBrand = (req, res) => {
+const updateBrand = async (req, res) => {
     try {
         const brandId = req.params.id;
         const update = req.body.brand;

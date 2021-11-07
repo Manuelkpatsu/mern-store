@@ -10,6 +10,11 @@ const helmet = require('helmet');
 
 const webpackConfig = require('../webpack.config');
 const connectDB = require('./config/db');
+const keys = require('./config/keys');
+const apiRoutes = require('./routes');
+const { apiURL } = keys.app;
+
+const api = `/${apiURL}`;
 
 const app = express();
 
@@ -25,6 +30,13 @@ app.use(cors());
 
 // Connect to MongoDB
 connectDB();
+
+// Initialize passport
+require('./config/passport')(app);
+
+// api routes
+app.use(api, apiRoutes);
+app.use(api, (req, res) => res.status(404).json('No API route found'));
 
 // if development
 if (process.env.NODE_ENV !== 'production') {

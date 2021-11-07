@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk');
 const mongoose = require('mongoose');
 
-const Product = require('../models/product');
-const Brand = require('../models/brand');
-const Category = require('../models/category');
+const Product = require('../models/product.model');
+const Brand = require('../models/brand.model');
+const Category = require('../models/category.model');
 const checkAuth = require('../utils/auth');
 
 const getProductBySlug = async (req, res) => {
