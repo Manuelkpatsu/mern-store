@@ -73,4 +73,3 @@ var socket = function(server) {
 }
 
 module.exports = socket;
-
