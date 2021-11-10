@@ -1,4 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import store, { history } from './store';
+import { SET_AUTH } from './screens/Authentication/constants';
+import Application from './screens/Application';
+import ScrollToTop from './components/ScrollToTop';
 
 // Import application sass styles
 import './styles/style.scss';
@@ -18,24 +25,24 @@ import 'rc-slider/assets/index.css';
 // Authentication
 const token = localStorage.getItem('token');
 
+if (token) {
+  // authenticate api authorization
+  setToken(token);
+
+  // authenticate routes
+  store.dispatch({ type: SET_AUTH });
+}
+
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+      <Provider store={store}>
+        <Router history={history}>
+          <ScrollToTop>
+            <Application />
+          </ScrollToTop>
+        </Router>
+      </Provider>
+    );
 }
 
 export default App;

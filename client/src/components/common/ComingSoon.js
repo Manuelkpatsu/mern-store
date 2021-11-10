@@ -1,3 +1,5 @@
+import React from 'react';
+
 const ComingSoon = props => {
     return (
         <div className='coming-soon'>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col } from 'reactstrap';
 import SelectOption from '../../common/SelectOption';
 import Input from '../../common/Input';

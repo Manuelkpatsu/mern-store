@@ -1,5 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import Newsletter from '../../screens/Newsletter';
 
 const Footer = () => {
     const infoLinks = [
@@ -50,7 +52,7 @@ const Footer = () => {
                     <div className='footer-block'>
                         <div className='block-title'>
                             <h2>Newsletter</h2>
-                            <div>Add News letter component</div>
+                            <Newsletter />
                         </div>
                     </div>
                 </div>

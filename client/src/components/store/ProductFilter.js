@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import RangeSlider from '../common/RangeSlider';
 

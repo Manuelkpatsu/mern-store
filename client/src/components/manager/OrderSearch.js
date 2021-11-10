@@ -1,3 +1,4 @@
+import React from 'react';
 import SearchBar from '../common/SearchBar';
 
 const OrderSearch = props => {

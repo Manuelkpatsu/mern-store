@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { formatDate } from '../../helpers/date';
 import Button from '../common/Button';

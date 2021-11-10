@@ -1,3 +1,4 @@
+import React from 'react';
 import { UncontrolledTooltip } from 'reactstrap';
 
 const Tooltip = props => {

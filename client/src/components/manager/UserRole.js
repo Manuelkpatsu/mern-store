@@ -1,3 +1,5 @@
+import React from 'react';
+
 const UserRole = props => {
     const { className, user } = props;
   

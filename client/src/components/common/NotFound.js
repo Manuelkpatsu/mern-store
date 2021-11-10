@@ -1,3 +1,5 @@
+import React from 'react';
+
 const NotFound = props => {
     const { message, className, children } = props;
 

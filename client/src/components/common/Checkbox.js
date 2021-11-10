@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Checkbox = props => {
     const { id, label, name, checked, value, toggleCheckboxChange } = props;
 
