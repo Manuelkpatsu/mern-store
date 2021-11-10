@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
-
 import Button from '../common/Button';
 
 const CartList = props => {
@@ -24,8 +23,8 @@ const CartList = props => {
                                             className='item-image mr-2'
                                             src={`${
                                                 item.imageUrl
-                                                ? item.imageUrl
-                                                : '/images/placeholder-image.png'
+                                                    ? item.imageUrl
+                                                    : '/images/placeholder-image.png'
                                             }`}
                                         />
 
@@ -55,7 +54,7 @@ const CartList = props => {
                                     <p className='item-label'>price</p>
                                 </Col>
                                 <Col xs='3' className='text-right'>
-                                    <p className='value price'>{` $${item?.totalPrice}`}</p>
+                                    <p className='value price'>{` $${item.totalPrice}`}</p>
                                 </Col>
                             </Row>
                             <Row className='mb-2 align-items-center'>

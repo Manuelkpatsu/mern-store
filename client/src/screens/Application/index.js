@@ -1,9 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import actions from '../../actions';
 import Footer from '../../components/common/Footer';
 import Page404 from '../../components/common/Page404';
 import HomePage from '../Homepage';
+import Navigation from '../Navigation';
 
 class Application extends React.Component {
     componentDidMount() {
@@ -13,10 +16,10 @@ class Application extends React.Component {
         //     this.props.fetchProfile();
         // }
     
-        // this.props.handleCart();
+        this.props.handleCart();
     
-        // document.addEventListener('keydown', this.handleTabbing);
-        // document.addEventListener('mousedown', this.handleMouseDown);
+        document.addEventListener('keydown', this.handleTabbing);
+        document.addEventListener('mousedown', this.handleMouseDown);
     }
     
     handleTabbing(e) {
@@ -32,6 +35,7 @@ class Application extends React.Component {
     render () {
         return (
             <div className='application'>
+                <Navigation />
                 <main className='main'>
                     <Container>
                         <div className='wrapper'>
@@ -49,4 +53,11 @@ class Application extends React.Component {
     }
 }
 
-export default Application;
+const mapStateToProps = state => {
+    return {
+        authenticated: state.authentication.authenticated,
+        products: state.product.storeProducts
+    };
+};
+
+export default connect(mapStateToProps, actions)(Application);

@@ -6,6 +6,7 @@ import store, { history } from './store';
 import { SET_AUTH } from './screens/Authentication/constants';
 import Application from './screens/Application';
 import ScrollToTop from './components/ScrollToTop';
+import setToken from './utils/token';
 
 // Import application sass styles
 import './styles/style.scss';
