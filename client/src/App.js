@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import store, { history } from './store';
 import { SET_AUTH } from './screens/Authentication/constants';
 import Application from './screens/Application';

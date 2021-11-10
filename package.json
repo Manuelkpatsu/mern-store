@@ -54,7 +54,7 @@
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.6",
     "react-router": "^6.0.1",
-    "react-router-dom": "^6.0.0",
+    "react-router-dom": "^5.2.1",
     "react-select": "^5.2.0",
     "react-share": "^4.4.0",
     "reactstrap": "^9.0.0",

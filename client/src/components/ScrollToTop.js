@@ -1,8 +1,9 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ScrollToTop extends React.Component {
     componentDidUpdate(prevProps) {
-        if (this.props.history.location.pathname !== prevProps.history.location.pathname) {
+        if (this.props.history.pathname !== prevProps.history.pathname) {
             window.scroll({
                 top: 0,
                 behavior: 'smooth'
@@ -15,4 +16,4 @@ class ScrollToTop extends React.Component {
     }
 }
 
-export default ScrollToTop;
+export default withRouter(ScrollToTop);

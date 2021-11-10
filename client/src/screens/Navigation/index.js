@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, NavLink as ActiveLink } from 'react-router-dom';
+import { Link, NavLink as ActiveLink, withRouter } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
@@ -343,4 +343,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, actions)(Navigation);
+export default connect(mapStateToProps, actions)(withRouter(Navigation));
