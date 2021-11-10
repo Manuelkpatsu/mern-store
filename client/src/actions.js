@@ -4,6 +4,7 @@ import * as application from './screens/Application/actions';
 import * as account from './screens/Account/actions';
 import * as authentication from './screens/Authentication/actions';
 import * as cart from './screens/Cart/actions';
+import * as signup from './screens/Signup/actions';
 import * as login from './screens/Login/actions';
 import * as navigation from './screens/Navigation/actions';
 import * as newsletter from './screens/Newsletter/actions';
@@ -20,6 +21,7 @@ export default function mapDispatchToProps(dispatch) {
             ...account,
             ...authentication,
             ...cart,
+            ...signup,
             ...login,
             ...navigation,
             ...newsletter,

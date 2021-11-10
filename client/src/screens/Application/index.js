@@ -6,6 +6,7 @@ import actions from '../../actions';
 import Footer from '../../components/common/Footer';
 import Page404 from '../../components/common/Page404';
 import Login from '../Login';
+import Signup from '../Signup';
 import HomePage from '../Homepage';
 import Navigation from '../Navigation';
 
@@ -43,6 +44,7 @@ class Application extends React.Component {
                             <Switch>
                                 <Route exact path='/' component={HomePage} />
                                 <Route path='/login' component={Login} />
+                                <Route path='/register' component={Signup} />
                                 <Route path='/404' component={Page404} />
                                 <Route path='*' component={Page404} />
                             </Switch>
