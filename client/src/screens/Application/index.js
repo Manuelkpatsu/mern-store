@@ -7,6 +7,7 @@ import Footer from '../../components/common/Footer';
 import Page404 from '../../components/common/Page404';
 import Login from '../Login';
 import Signup from '../Signup';
+import ForgotPassword from '../ForgotPassword';
 import HomePage from '../Homepage';
 import Navigation from '../Navigation';
 
@@ -45,6 +46,7 @@ class Application extends React.Component {
                                 <Route exact path='/' component={HomePage} />
                                 <Route path='/login' component={Login} />
                                 <Route path='/register' component={Signup} />
+                                <Route path='/forgot-password' component={ForgotPassword} />
                                 <Route path='/404' component={Page404} />
                                 <Route path='*' component={Page404} />
                             </Switch>

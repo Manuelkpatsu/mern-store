@@ -8,6 +8,7 @@ import authenticationReducer from './screens/Authentication/reducer';
 import cartReducer from './screens/Cart/reducer';
 import signupReducer from './screens/Signup/reducer';
 import loginReducer from './screens/Login/reducer';
+import forgotPasswordReducer from './screens/ForgotPassword/reducer';
 import navigationReducer from './screens/Navigation/reducer';
 import newsletterReducer from './screens/Newsletter/reducer';
 import productReducer from './screens/Product/reducer';
@@ -26,6 +27,7 @@ const createReducer = history =>
         cart: cartReducer,
         signup: signupReducer,
         login: loginReducer,
+        forgotPassword: forgotPasswordReducer,
         product: productReducer,
         navigation: navigationReducer,
         newsletter: newsletterReducer,
